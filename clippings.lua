@@ -4,7 +4,7 @@
 --to look up a definitoon the program needs a valid api key from https://www.dictionaryapi.com/.
 --API key should be placed in the 'definitions.lua' module file. please look there for the correct location.
 --Licnesed under GPL 3.0
---source can be found on https://github.com/return5/kindleclippingsv1
+--source can be found oat: https://github.com/return5/kindleClippings-v2.0 
 --[[ 
         license: GPL 3.0.  written by: github/return5
     
