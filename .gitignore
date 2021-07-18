@@ -43,6 +43,6 @@ luac.out
 
 #misc.
 
-.txt
+*.txt
 clippings
 
