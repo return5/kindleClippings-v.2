@@ -1,3 +1,0 @@
-
-
-curl -H "Accept:application/json" https://dictionaryapi.com/api/v3/references/collegiate/json/hello?key=faecc96a-2407-4ea2-b4bc-7012ef84ee10 https://dictionaryapi.com/api/v3/references/collegiate/json/world?key=faecc96a-2407-4ea2-b4bc-7012ef84ee10 
