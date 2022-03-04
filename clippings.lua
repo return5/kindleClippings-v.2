@@ -101,7 +101,7 @@ local function main()
     --list of all previously looked up definitions.
     local defs        = def_mod.getDefs()
     --entire clipping file in one long string.
-    local clippings   = utils.readFile("clippings.txt")
+    local clippings   = utils.readFile(arg[1] or "clippings.txt")
     --match and write clipppings to files. also handles saving words to look up for later.
     matchClippings(clippings,defs)
 

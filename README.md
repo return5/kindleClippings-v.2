@@ -11,9 +11,13 @@ Definitions will be saved into a filed called 'defs.txt'
 - UNIX like OS (Will probably work with something like Cygwin or git bash on Windows, but I haven't tested it.)  
   
 #### Running  
-- place your kindle clipping file inside same directory as all the Lua files. (Make sure it is named 'clippings.txt')
+- place your kindle clipping file inside same directory as all the Lua files.
 - Add your API key inside 'definitions.lua'. there is a variable named 'key' which you need to set to your API key.
 - Run the command:  
-  `lua clippings.lua`  
+  - if your clipping file is names 'clippings.txt' :  
+    `lua clippings.lua`  
+  - otherwise:  
+    `lua clippings.lua path/to/clippingfile`
+
   
 
