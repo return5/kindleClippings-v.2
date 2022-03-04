@@ -4,7 +4,7 @@
 --to look up a definitoon the program needs a valid api key from https://www.dictionaryapi.com/.
 --API key should be placed in the 'definitions.lua' module file. please look there for the correct location.
 --Licnesed under GPL 3.0
---source can be found oat: https://github.com/return5/kindleClippings-v2.0 
+--source can be found on https://github.com/return5/kindleclippingsv1
 --[[ 
         license: GPL 3.0.  written by: github/return5
     
@@ -41,9 +41,9 @@ end
 --write the clipping to the correct file. 
 --if it is an individual word then save it to be looked up later.
 local function writeToFile(match,loc,file,defs,files,existing_defs)
-    if file == "defs" then
+    if file and file == "defs" then
         def_mod.saveDef(match,defs,existing_defs) 
-    elseif file ~= "defs" then
+    elseif file and file ~= "defs" then
         loc = getLocation(loc)
         file:write(match .. "\n\t" .. loc)
         file:write("\n==============\n\n")

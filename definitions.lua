@@ -9,7 +9,7 @@ _ENV  = M
 
 
 --api key goes inside of this variable. please make sure to set it before attempting to run program if oyu wish to look up defintiions.
-local key 
+local key = "key=faecc96a-2407-4ea2-b4bc-7012ef84ee10 "
 --the first part of the url which each api call uses.
 local uri = "https://dictionaryapi.com/api/v3/references/collegiate/json/"
 --
@@ -65,7 +65,6 @@ end
 --extract the word from the results from curl.
 local function getWord(match)
     if match then
-        io.write("\n\nmnatch is: ",match,"\n\n")
         return match:match("\"meta\":%s*{%c*\"id\"%s*:%s*\"(.-)\","):gsub("(.-)(:.-)$","%1"):gsub("%c","")
     end
     return nil
@@ -77,6 +76,7 @@ local function writeDefs(defs,match)
         --we use a second pattern to match the definitons specifically.
         --doing all of this in a single lua pattern was a bit much for me. works better this way for me. 
         if def:match("^[^{].-") then
+            def = def:gsub("{._link|([^|]+)[^}]*}","%1"):gsub("{bc}([^{]+)","\n\t - %1"):gsub("{bc}({sx.+})","%1"):gsub("{sx|([^|]*)||.-}.?%s*","\n\t - %1")
             defs:write("\t - ",def,"\n")
         end
     end
